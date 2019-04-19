@@ -1,0 +1,5 @@
+
+
+global.h+=1
+_mouse.x=mouse_x
+_mouse.y=mouse_y
