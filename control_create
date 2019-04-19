@@ -1,0 +1,16 @@
+
+
+randomize()
+global.total_dots=75
+global.max_distance=256
+global.dot_list=ds_list_create()
+global.h=0
+for(i=0; i<global.total_dots; i++)
+    {
+    ds_list_add(global.dot_list,instance_create(random(room_width),random(room_height),obj_dot))
+    }
+    
+_mouse=ds_list_find_value(global.dot_list,0)
+_mouse.speed=0
+_mouse.x=mouse_x
+_mouse.y=mouse_y
