@@ -1,0 +1,23 @@
+
+//scr_draw_lines(max_distance)
+_max_dis=argument0
+
+
+
+for(i=0; i<global.total_dots; i++)
+    {
+    _v=ds_list_find_value(global.dot_list,i)
+    if _v!=id
+        {
+        _d=point_distance(x,y,_v.x,_v.y)
+        if _d<_max_dis
+            {
+            _n=1-(_d/_max_dis)
+            _c=make_color_hsv(global.h,255,_n*255)
+
+            draw_line_color(x,y,_v.x,_v.y,_c,_c)
+            
+            }
+        }
+    }
+    
