@@ -1,0 +1,5 @@
+
+
+move_wrap(true,true,32)
+draw_circle(x,y,1,false)
+scr_draw_lines(global.max_distance)
